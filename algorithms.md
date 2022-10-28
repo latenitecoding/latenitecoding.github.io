@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /algorithms/
 title: Algorithms
 ---
 
@@ -28,3 +29,24 @@ Some fun facts about the setup of this project include:
 Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
 
 Thanks for reading!
+
+{% for tag in site.tags %}
+  <h3>{{ tag[0] | capitalize }}</h3>
+  <ul>
+    {% for post in tag[1] %}
+      {% if post.category == "algorithms" %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.category == "algorithms" %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
