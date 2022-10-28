@@ -40,13 +40,3 @@ Thanks for reading!
     {% endfor %}
   </ul>
 {% endfor %}
-
-<ul>
-  {% for post in site.posts %}
-    {% if post.category == "algorithms" %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
