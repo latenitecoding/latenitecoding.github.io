@@ -34,6 +34,9 @@ accent_color = "blue"
 # Defaults to accent color (or, if not accent color specified, to blue).
 background_color = "dark"
 
+katex_enable = true
+katex_auto_render = true
+
 # The logo text - defaults to "Terminimal theme"
 logo_text = "Algo Owls"
 
