@@ -10,10 +10,15 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+taxonomies = [
+    {name = "tags"},
+]
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "boron"
 
 [extra]
 # Put all your custom variables here
@@ -39,7 +44,7 @@ menu_items = [
     {name = "home", url = "$BASE_URL"},
 
     {name = "algorithms", url = "$BASE_URL/algorithms"},
-    {name = "data structures", url = "$BASE_URL/data_structures"},
+    {name = "data structures", url = "$BASE_URL/data-structures"},
     {name = "theorems", url = "$BASE_URL/theorems"},
     {name = "exercises", url = "$BASE_URL/exercises"},
     {name = "contests", url = "$BASE_URL/contests"},
@@ -52,10 +57,6 @@ menu_items = [
     
     # set newtab to true to make the link open in new tab
     {name = "github", url = "https://github.com/latenitecoding/algo_owls", newtab = true},
-]
-
-taxonomies = [
-    {name = "tags"},
 ]
 
 # Whether to show links to earlier and later posts
