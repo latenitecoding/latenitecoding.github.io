@@ -53,3 +53,6 @@ candidates that can be matched to the members of T).
 
 \\[N_g(T) = \text{ \\{ } v \in V(G) \text{ | } vw \in E(G) \text{ for some } w \in T \text{ \\} } \\]
 
+# Exercises
+
+- [On-Call Team](@/_exercises/on_call_team.md)
