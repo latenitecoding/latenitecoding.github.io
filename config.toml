@@ -51,6 +51,7 @@ menu_items = [
     {name = "algorithms", url = "$BASE_URL/algorithms"},
     {name = "structures", url = "$BASE_URL/data-structures"},
     {name = "theorems", url = "$BASE_URL/theorems"},
+    {name = "tricks", url = "$BASE_URL/tricks"},
     {name = "languages", url = "$BASE_URL/languages"},
     {name = "exercises", url = "$BASE_URL/exercises"},
     {name = "contests", url = "$BASE_URL/contests"},
