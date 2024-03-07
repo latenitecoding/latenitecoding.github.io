@@ -8,8 +8,9 @@ tags = ["icpc", "regionals-2023"]
 +++
 This problem was introduced as part of the 2023 ICPC Regionals Contest held on Feb. 24th, 2024 for the SCUSA region. It is now archived on Kattis.
 
-- [Problem Link](https://open.kattis.com/problems/oncallteam)
-- [Test Cases and Solution](http://serjudging.vanb.org/)
+[Problem Link](https://open.kattis.com/problems/oncallteam)
+
+[Test Cases and Solution](http://serjudging.vanb.org/)
 
 {% spoiler(title="Reveal Solution") %}
 The number of services indicated in the problem is limited to a maximum size of 20 services. The size of the powerset of these services is therefore limited to \\(2^{20} \approx 10^6\\), which is solvable.
@@ -33,21 +34,21 @@ The number of services indicated in the problem is limited to a maximum size of 
         }
      }
      ```
-     _See [Snippets](@/snippets/caching_engineers.md)._
+     _See [Snippets](@/_snippets/caching_engineers.md)._
 
 3. Let the number of selected services in the mask be \\(k\\). If the number of assignable engineers is less than \\(k\\), then the target robustness level must also be less than \\(k\\). It can be at most \\(k - 1\\). Store the minimum robustness level between the current target robustness level and \\(k - 1\\).
 
    ```java
    maxK = Math.min(maxK, k - 1);
    ```
-   _See [Snippets](@/snippets/min_two.md)._
+   _See [Snippets](@/_snippets/min_two.md)._
 
    - The number of selected services can be computed using the mask bitcount, which is the number of 1-bits in the number.
 
    ```java
    int k = Integer.bitCount(mask);
    ```
-   _See [Snippets](@/snippets/bit_count.md)._
+   _See [Snippets](@/_snippets/bit_count.md)._
 
 See
 - [Hall's Theorem](@/_theorems/halls_theorem.md)
