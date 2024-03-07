@@ -21,7 +21,8 @@ set of neighbors that each vertex in X has.
 If you're going to be working with Hall's Theorem, it would be good to
 familiarize yourself with set union, set intersection, and the identities
 related to the cardinality of a set. One helpful identity has been included
-below.
+below. See [Set Operations](@/_tricks/set_ops.md).
+
 - \\(|A \cup B| + |A \cap B| = |A| + |B|\\)
 
 
