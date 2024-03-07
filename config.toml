@@ -64,6 +64,7 @@ menu_items = [
     
     # set newtab to true to make the link open in new tab
     {name = "github", url = "https://github.com/latenitecoding/algo_owls", newtab = true},
+    {name = "solutions", url = "https://github.com/latenitecoding/algo_owls_solutions", newtab = true},
 ]
 
 # Whether to show links to earlier and later posts
