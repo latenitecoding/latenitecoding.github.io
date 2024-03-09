@@ -75,7 +75,7 @@ The number of services indicated in the problem is limited to a maximum size of 
        _See [Snippets](@/_snippets/bit_count.md)._
 
 See
-- [Hall's Theorem](@/_theorems/halls_theorem.md)
+- [Hall's Theorem](@/_theory/halls_theorem.md)
 
 Optimizations
 

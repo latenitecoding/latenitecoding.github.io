@@ -6,14 +6,14 @@ date = 2024-03-02
 [taxonomies]
 tags = ["graph-theory", "perfect-matching"]
 +++
-Hall's Theorem, also known as Hall's Marriage Theorem, can be used to decide whether or not a **perfect matching** exists in a **[bipartite graph](@/_theorems/bipartite_graph.md)**. This can be  applied to solving [constraint satisfaction problems](@/_theorems/constraint_satisfaction_problem.md) (CSPs) where some members of a set X  need to be matched with members of a set Y, but these members can only be matched 1-to-1. 
+Hall's Theorem, also known as Hall's Marriage Theorem, can be used to decide whether or not a **perfect matching** exists in a **[bipartite graph](@/_theory/bipartite_graph.md)**. This can be  applied to solving [constraint satisfaction problems](@/_theory/constraint_satisfaction_problem.md) (CSPs) where some members of a set X  need to be matched with members of a set Y, but these members can only be matched 1-to-1. 
 
-The advantage of Hall's Theorem is that it allows us to use [set logic](@/_theorems/set_theory.md) to determine whether or not a matching exists for some CSP. Typically, we would need to use a [flow network](@/_data_structures/flow_network.md) to compute the maximal matching, or any matching, of a given graph. When applying Hall's Theorem, we don't need to construct a flow network or apply a [max flow algorithm](@/_algorithms/maximum_flow.md). We can instead match members of the [power set](@/_theorems/set_theory.md#power-set) of X to some selection of Y by only looking at the set of neighbors that each vertex in X has.
+The advantage of Hall's Theorem is that it allows us to use [set logic](@/_theory/set_theory.md) to determine whether or not a matching exists for some CSP. Typically, we would need to use a [flow network](@/_data_structures/flow_network.md) to compute the maximal matching, or any matching, of a given graph. When applying Hall's Theorem, we don't need to construct a flow network or apply a [max flow algorithm](@/_algorithms/maximum_flow.md). We can instead match members of the [power set](@/_theory/set_theory.md#power-set) of X to some selection of Y by only looking at the set of neighbors that each vertex in X has.
 
 If you're going to be working with Hall's Theorem, it would be good to
 familiarize yourself with set union, set intersection, and the identities
 related to the cardinality of a set. One helpful identity has been included
-below. See [Set Theory](@/_theorems/set_theory.md).
+below. See [Set Theory](@/_theory/set_theory.md).
 
 - \\(|A \cup B| + |A \cap B| = |A| + |B|\\)
 

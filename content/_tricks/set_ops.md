@@ -8,7 +8,7 @@ tags = ["set-theory"]
 +++
 
 ### _Fast Union Size_
-See [Set Union](@/_theorems/set_theory.md#set-union).
+See [Set Union](@/_theory/set_theory.md#set-union).
 
 There are several ways to compute the union of sets that range in complexity from \\(O(n)\\) to \\(O(n^3)\\), where \\(n = |S_1| + |S_2| + ...\\). The notation \\(|X|\\) represents the _cardinality_ or _size_ of the set X (i.e., the number of elements that it contains). This particular approach to computing the union of sets is \\(O(n)\\). Its purpose is to increase the performance of computing the union of sets across multiple **successive computations** of a set union by reducing mem allocations. It can generally be applied in cases where only the size of the union is needed rather than the individual elements in the union.
 
