@@ -41,4 +41,26 @@ The **union** of two sets A and B, denoted \\(A \cup B = C\\), has the following
 
 - _An element \\(x \in C\\) iff \\(x \in A\\) or \\(x \in B\\)._
 
-The union of two sets determines which elements appear in either of the two sets. Note that since the elements of a set must be unique, if an element appears in both set A and set B, then it only appears once in set C. As such, it should be understood that \\(|A \cup B| \neq |A| + |B|\\) in most cases. The equality only holds if the intersection of sets A and B is empty.
+The union of two sets determines which elements appear in either of the two sets. Note that since the elements of a set must be unique, if an element appears in both set A and set B, then it only appears once in set C. As such, it should be understood that \\(|A \cup B| \neq |A| + |B|\\) in most cases. The equality only holds if the intersection of sets A and B is empty. This leads to a commonly known set theorem.
+
+- _\\(|A \cup B| + |A \cap B| = |A| + |B|\\)_
+
+# Empty Set
+_There is a special set called the empty set denoted \\(\empty\\) that contains no elements. It is therefore also true that \\(|\empty| = 0\\)._
+
+# Subsets
+_A set X is called a subset of Y denoted \\(X \subseteq Y\\) if every element \\(x \in X\\) is also an element of Y (\\(x \in Y\\)). If \\(X \subseteq Y\\) and there is some element \\(y \in Y\\) that is not in X (\\(y \not\in X\\)), then we can say that X is a **proper** subset of Y denoted \\(X \subset Y\\)._
+
+The use of subsets provides a convenient notation to describe some collection of elements when all possible elements are known. The collection of all possible elements is typically referred to as the **universal set** and is denoted \\(U\\). The idea opposite to the universal set would be the empty set, which contains no elements. Two interesting axioms follow from these ideas.
+
+- _Given some universal set \\(U\\), for any set X, \\(X \subseteq U\\)._
+- _Given some set X, \\(\empty \subseteq X\\)._
+
+The last axiom is the most surprising and should be committed to memory. The empty set is considered to be a subset of all other sets, including itself.
+
+# Power Set
+_Given a set Y, we can define the power set of Y denoted \\(P(Y)\\) s.t. all sets X where \\(X \subseteq Y\\), \\(X \in P(Y)\\)._
+
+The power set of a given set Y is a collection of all subsets of Y, including the empty set. It is useful for expressing all possible selections of all possible sizes that could be taken from Y. Given its construction, the size of the power set is always known.
+
+- _Given some set Y, \\(|P(Y)| = 2^{|Y|}\\)._
