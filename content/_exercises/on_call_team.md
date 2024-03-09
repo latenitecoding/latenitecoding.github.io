@@ -19,9 +19,17 @@ The number of services indicated in the problem is limited to a maximum size of 
 
    - Given some jth service, you can determine whether that service has been selected by computing the bitwise AND of the mask and \\(2^j\\). If the result is greater than 0, then the jth service has been selected. See [Bitwise AND](@/_tricks/bitwise_ops.md#bitwise-and).
 
-2. For each selected service, iterate over the engineers that are assignable to that service. Compute the total number of engineers that can be assigned to at least one of the selected services by computing the size of the union across engineers that can be assigned to the selected services. This is the _number of assignable engineers_. See [Fast Union Size](@/_tricks/set_ops.md#fast-union-size).
+     ```java
+     for (int mask = 1; mask < (1 << m); mask++) {
+         if ((mask & (1 << j)) > 0) {
+            // the jth service is in the selection
+         }
+     }
+     ```
 
-   - You can improve the performance of this step by assigning each engineer to each service that they can support when the engineers are first processed. Thus, the engineers that are assignable to each service will already be known when this step is reached. This improves the performance of computing the union by limiting our scope to only those engineers that are known to be within the union. The following snippet can be used to assign engineers to their respective services. Note that an array is used instead of an `ArrayList` or `HashSet`. See [Generics](@/_languages/java.md#generics).
+2. For each selected service, iterate over the engineers that are assignable to that service. Compute the total number of engineers that can be assigned to at least one of the selected services. This is the _number of assignable engineers_.
+
+   - To assist with this step, you can assign each engineer to each service they can support when the engineers are first processed. Thus, the engineers that are assignable to each service will already be known when this step is reached. This also improves the performance of computing the union of assignable engineers by limiting our scope to only those engineers that are known to be within the union. The following snippet can be used to assign engineers to their respective services. Note that an array is used instead of an `ArrayList` or `HashSet`. See [Generics](@/_languages/java.md#generics).
 
      ```java
      int[] sizes = new int[m];
@@ -36,7 +44,23 @@ The number of services indicated in the problem is limited to a maximum size of 
      ```
      _See [Snippets](@/_snippets/caching_engineers.md)._
 
-3. Let the number of selected services in the mask be \\(k\\). If the number of assignable engineers is less than \\(k\\), then the target robustness level must also be less than \\(k\\). It can be at most \\(k - 1\\). Store the minimum robustness level between the current target robustness level and \\(k - 1\\).
+   - To compute the number of assignable engineers, you have to compute the size of the union of engineers that can be assigned to any of the services in the selection. Since you'll have to do this for each mask, you'll need to compute the sizes of many different unions. This process can easily lead to wasted performance and memory. To improve the process, you can reuse an `int[]` to mark which engineers are the current union. See [Fast Union Size](@/_tricks/set_ops.md#fast-union-size).
+
+        ```java
+        // assume that there is an int[] union = new int[n];
+        int unionSize = 0;
+        for (int i = 0; i < sizes[j]; i++) {
+            int e = cache[j][i];
+            if (union[e - 1] != i) {
+                // e is not in the union
+                union[e - 1] = i;
+                unionSize++;
+            }
+        }
+        ```
+        _See [Snippets](@/_snippets/union_size.md)._
+
+3. Let the number of selected services in the mask be \\(k\\). If the number of assignable engineers (union size) is less than \\(k\\), then the target robustness level must also be less than \\(k\\). It can be at most \\(k - 1\\). Store the minimum robustness level between the current target robustness level and \\(k - 1\\).
 
    ```java
    maxK = Math.min(maxK, k - 1);
@@ -45,10 +69,10 @@ The number of services indicated in the problem is limited to a maximum size of 
 
    - The number of selected services can be computed using the mask bitcount, which is the number of 1-bits in the number.
 
-   ```java
-   int k = Integer.bitCount(mask);
-   ```
-   _See [Snippets](@/_snippets/bit_count.md)._
+       ```java
+       int k = Integer.bitCount(mask);
+       ```
+       _See [Snippets](@/_snippets/bit_count.md)._
 
 See
 - [Hall's Theorem](@/_theorems/halls_theorem.md)
