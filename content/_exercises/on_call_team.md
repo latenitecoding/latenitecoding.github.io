@@ -10,10 +10,10 @@ This problem was introduced as part of the 2023 ICPC Regionals Contest held on F
 
 [Problem Link](https://open.kattis.com/problems/oncallteam)
 
-[Test Cases and Solution](http://serjudging.vanb.org/)
+[Test Cases and Solution](http://serjudging.vanb.org/?cat=47)
 
 {% spoiler(title="Reveal Solution") %}
-The number of services indicated in the problem is limited to a maximum size of 20 services. The size of the powerset of these services is therefore limited to \\(2^{20} \approx 10^6\\), which is solvable.
+The number of services indicated in the problem is limited to a maximum size of 20 services. The size of the [power set](@/_theory/set_theory.md#power-set) of these services is therefore limited to \\(2^{20} \approx 10^6\\), which is solvable.
 
 1. Assume that the _target robustness level_ is the maximum number of services \\(m\\). Then, compute each possible selection of services by looking at each number in range 1..\\(2^m\\) (exclusive). Each of these numbers represents some selection of bits, where the jth bit indicates whether the jth service has been selected. Let's call this number the _mask_.
 
