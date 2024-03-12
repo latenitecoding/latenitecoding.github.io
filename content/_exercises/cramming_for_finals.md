@@ -72,9 +72,11 @@ The grid size for this problem is unmanageably large. However, the number of stu
          double h = r - getRow(t, len);
          double angle = Math.asin(h / d);
          double b = Math.cos(angle) * d;
-         return 2 * ((int) Math.floor(b)) + 1;
+         return 2 * ((int) Math.floor(b + 0.0000001)) + 1;
        }
        ```
+
+       Note the inclusion of \\(0.0000001\\). This is used to ensure that numbers within an epsilon of 7 significant figures are considered to be the same number. Otherwise, the number \\(4.9999999\\) will be treated as \\(4\\) rather than \\(5\\).
 
 5. Let the number of students that can be heard from an unoccupied table be its _noise level_. Compute the minimum noise level for the current row by finding the table on the current row in the cache with the smallest value. Maintain the smallest noise level that you see across rows. If the noise level is ever \\(0\\), then the solution is \\(0\\).
 
@@ -85,5 +87,7 @@ The grid size for this problem is unmanageably large. However, the number of stu
 Optimizations
 
 - After processing the current row, if you discover that there is a table whose noise level is \\(0\\), then that is the solution.
+
+- Scanning the noise level of each element in the cache is too slow. However, you can keep track of the noise level of each table on a given row as you process the student tables without having to maintain a cache. Given a current row, each student that can be heard from that row is represented by an interval. These intervals each have a _left value_ (which opens the interval) and a _right value_ (which closes the interval). Store these intervals and sort them by least left, then least right. Iterate over the intervals. The noise level across tables increases by 1 for each left value and decreases by 1 for each right value. Each interval of length \\(2d\\) is an interval with a student sitting at the middle. Student tables cannot be occupied. Keep track of the smallest noise level across interval only considering tables that can be occupied. If there are any gaps between intervals, then the noise level on this row is \\(0\\) and the solution to the problem is also \\(0\\).
 
 {% end %}
