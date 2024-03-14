@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://latenitecoding.github.io/style.css">
+    <link rel="stylesheet" href="https://latenitecoding.github.io/color/blue.css">
+
+        <link rel="stylesheet" href="https://latenitecoding.github.io/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://latenitecoding.github.io/font-hack.css">
+
+    <meta name="description" content="">
+
+    <meta property="og:description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://latenitecoding.github.io/set-theory/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="">
+    <meta property="twitter:domain" content="latenitecoding.github.io">
+    <meta property="twitter:url" content="https://latenitecoding.github.io/set-theory/">
+
+        
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+            
+                <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+            
+        
+        
+            <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+            </script>
+        
+    
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+        
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://latenitecoding.github.io" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            Algo Owls
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://latenitecoding.github.io">home</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/algorithms">algorithms</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/data-structures">structures</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/theory">theory</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/tricks">tricks</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/languages">languages</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/exercises">exercises</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/contests">contests</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/tags">tags</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/archive">archive</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/about">about</a></li>
+            
+                <li><a href="https://github.com/latenitecoding/algo_owls" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://github.com/latenitecoding/algo_owls_solutions" target="_blank" rel="noopener noreferrer">solutions</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://latenitecoding.github.io/set-theory/">Set Theory</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-03-07
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://latenitecoding.github.io/tags/set-theory/">#set-theory</a></span>
+    
+
+        <div class="post-content">
+            <h1 id="definition"><a class="zola-anchor" href="#definition" aria-label="Anchor link for: definition">Definition</a></h1>
+<p><em>A set is an unordered collection of objects s.t. each object in the set is unique.</em></p>
+<p>Since a set is unordered, its elements have no assigned indices. Sets have no inherent structure, and the elements of a set can be represented in any order. For example, the sets A = {1, 2, 3} and B = {3, 2, 1} are the same sets. Sets are typically notated as a collection of elements between curly braces.</p>
+<p>The elements of a set are unique, which means that each element in a given set can only appear once across the set. This makes sets extremely useful for determining which elements uniquely appear across some larger collection.</p>
+<p>The common operations related to sets are cardinality, difference, intersection, members, and union.</p>
+<h3 id="set-cardinality"><a class="zola-anchor" href="#set-cardinality" aria-label="Anchor link for: set-cardinality"><em>Set Cardinality</em></a></h3>
+<p>The <strong>cardinality</strong>, or size, of a set indicates the number of elements in the set. Given a set X, its cardinality is denoted \(|X|\).</p>
+<h3 id="set-difference"><a class="zola-anchor" href="#set-difference" aria-label="Anchor link for: set-difference"><em>Set Difference</em></a></h3>
+<p>The <strong>difference</strong> of two sets A and B is denoted \(A - B = C\) and has the following property.</p>
+<ul>
+<li><em>An element \(x \in C\) iff \(x \in A\) and \(x \not\in B\).</em></li>
+</ul>
+<p>In other words, the difference of sets A and B determines which elements only appear in A.</p>
+<h3 id="set-intersection"><a class="zola-anchor" href="#set-intersection" aria-label="Anchor link for: set-intersection"><em>Set Intersection</em></a></h3>
+<p>The <strong>intersection</strong> of two sets A and B is denoted \(A \cap B = C\) and has the following property.</p>
+<ul>
+<li><em>An element \(x \in C\) iff \(x \in A\) and \(x \in B\).</em></li>
+</ul>
+<p>The intersection of two sets determines which elements appear in both sets.</p>
+<h3 id="set-membership"><a class="zola-anchor" href="#set-membership" aria-label="Anchor link for: set-membership"><em>Set Membership</em></a></h3>
+<p>The notation \(x \in X\) is typically used to denote that some element x is a <strong>member</strong> of the set X. Lowercase letters are commonly used as variables of elements in a set while uppercase letters are typically used as variables for the sets themselves. Similarly, the notation \(x \not\in X\) is used to indicate that the element x is not in the set X.</p>
+<h3 id="set-union"><a class="zola-anchor" href="#set-union" aria-label="Anchor link for: set-union"><em>Set Union</em></a></h3>
+<p>The <strong>union</strong> of two sets A and B, denoted \(A \cup B = C\), has the following property.</p>
+<ul>
+<li><em>An element \(x \in C\) iff \(x \in A\) or \(x \in B\).</em></li>
+</ul>
+<p>The union of two sets determines which elements appear in either of the two sets. Note that since the elements of a set must be unique, if an element appears in both set A and set B, then it only appears once in set C. As such, it should be understood that \(|A \cup B| \neq |A| + |B|\) in most cases. The equality only holds if the intersection of sets A and B is empty. This leads to a commonly known set theorem.</p>
+<ul>
+<li><em>\(|A \cup B| + |A \cap B| = |A| + |B|\)</em></li>
+</ul>
+<h1 id="empty-set"><a class="zola-anchor" href="#empty-set" aria-label="Anchor link for: empty-set">Empty Set</a></h1>
+<p><em>There is a special set called the empty set denoted \(\empty\) that contains no elements. It is therefore also true that \(|\empty| = 0\).</em></p>
+<h1 id="subsets"><a class="zola-anchor" href="#subsets" aria-label="Anchor link for: subsets">Subsets</a></h1>
+<p><em>A set X is called a subset of Y denoted \(X \subseteq Y\) if every element \(x \in X\) is also an element of Y (\(x \in Y\)). If \(X \subseteq Y\) and there is some element \(y \in Y\) that is not in X (\(y \not\in X\)), then we can say that X is a <strong>proper</strong> subset of Y denoted \(X \subset Y\).</em></p>
+<p>The use of subsets provides a convenient notation to describe some collection of elements when all possible elements are known. The collection of all possible elements is typically referred to as the <strong>universal set</strong> and is denoted \(U\). The idea opposite to the universal set would be the empty set, which contains no elements. Two interesting axioms follow from these ideas.</p>
+<ul>
+<li><em>Given some universal set \(U\), for any set X, \(X \subseteq U\).</em></li>
+<li><em>Given some set X, \(\empty \subseteq X\).</em></li>
+</ul>
+<p>The last axiom is the most surprising and should be committed to memory. The empty set is considered to be a subset of all other sets, including itself.</p>
+<h1 id="power-set"><a class="zola-anchor" href="#power-set" aria-label="Anchor link for: power-set">Power Set</a></h1>
+<p><em>Given a set Y, we can define the power set of Y denoted \(P(Y)\) s.t. all sets X where \(X \subseteq Y\), \(X \in P(Y)\).</em></p>
+<p>The power set of a given set Y is a collection of all subsets of Y, including the empty set. It is useful for expressing all possible selections of all possible sizes that could be taken from Y. Given its construction, the size of the power set is always known.</p>
+<ul>
+<li><em>Given some set Y, \(|P(Y)| = 2^{|Y|}\).</em></li>
+</ul>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h">Read more</span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                
+                    <span class="button next">
+                        <a href="https://latenitecoding.github.io/halls-theorem/">
+                            <span class="button__text">Hall&#x27;s Theorem</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2024
+ Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

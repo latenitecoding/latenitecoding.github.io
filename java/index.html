@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://latenitecoding.github.io/style.css">
+    <link rel="stylesheet" href="https://latenitecoding.github.io/color/blue.css">
+
+        <link rel="stylesheet" href="https://latenitecoding.github.io/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://latenitecoding.github.io/font-hack.css">
+
+    <meta name="description" content="">
+
+    <meta property="og:description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://latenitecoding.github.io/java/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="">
+    <meta property="twitter:domain" content="latenitecoding.github.io">
+    <meta property="twitter:url" content="https://latenitecoding.github.io/java/">
+
+        
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+            
+                <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+            
+        
+        
+            <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+            </script>
+        
+    
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+        
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://latenitecoding.github.io" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            Algo Owls
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://latenitecoding.github.io">home</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/algorithms">algorithms</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/data-structures">structures</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/theory">theory</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/tricks">tricks</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/languages">languages</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/exercises">exercises</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/contests">contests</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/tags">tags</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/archive">archive</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/about">about</a></li>
+            
+                <li><a href="https://github.com/latenitecoding/algo_owls" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://github.com/latenitecoding/algo_owls_solutions" target="_blank" rel="noopener noreferrer">solutions</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://latenitecoding.github.io/java/">Java</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-03-03
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://latenitecoding.github.io/tags/imperative/">#imperative</a>&nbsp;
+                <a class="post-tag" href="https://latenitecoding.github.io/tags/language/">#language</a></span>
+    
+
+        <div class="post-content">
+            <p>Java is a general purpose programming language designed for enterprise scale software development. It is an object-oriented programming language that offers memory safety and robust deployment via the Java virtual machine (JVM) and its tri-generational garbage collector. Java is about 2x slower than C which is achieved through its multipass just-in-time (JIT) compiler that offers additional optimizations at runtime over the lifecycle of a program. Although not the most popular language across newer students, Java is still widely used across K-12 programs and at universities. This is in large part due to its staying power in corporate and enterprise applications both because of the vast amount of legacy code as well as the wide availability of programmers that can use the language. </p>
+<h1 id="entry-point"><a class="zola-anchor" href="#entry-point" aria-label="Anchor link for: entry-point">Entry Point</a></h1>
+<p>Java follows the C paradigm of having an explicitly defined <code>main</code> method that can be used as the program entry point.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#8fbfdc;">public static</span><span> void </span><span style="color:#ffb964;">main</span><span>(</span><span style="color:#ffb964;">String</span><span style="color:#8fbfdc;">[]</span><span> args) {
+</span><span>    </span><span style="color:#888888;">// code goes here
+</span><span>}
+</span></code></pre>
+<h1 id="printing-on-standard-output"><a class="zola-anchor" href="#printing-on-standard-output" aria-label="Anchor link for: printing-on-standard-output">Printing on Standard Output</a></h1>
+<p>Java provides the class <code>System.out</code> which is a <code>java.io.OutputStream</code> and can be used to print output on STDOUT. While <code>.println()</code> is the most common method, <code>System.out</code> also provides <code>.print()</code> and <code>.printf()</code> which can be used to print without a newline character or to use formatted printing, respectively. It should be noted that the newline character used by <code>.println()</code> is platform dependent.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#ffb964;">System</span><span>.out.</span><span style="color:#ffb964;">println</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Hello, World!</span><span style="color:#556633;">&quot;</span><span>);
+</span></code></pre>
+<h1 id="reading-from-standard-input"><a class="zola-anchor" href="#reading-from-standard-input" aria-label="Anchor link for: reading-from-standard-input">Reading from Standard Input</a></h1>
+<p>The preferred approach to reading input from STDIN is to use the <code>java.io.BufferedReader</code> class. It provides a <code>.readLine()</code> method that can be used to read a single line of input from STDIN. It will parse and consume the next <code>\n</code> or <code>\r\n</code>. Note that both constructing this class and calling its methods can result in an <code>java.io.IOException</code>.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#ffb964;">BufferedReader</span><span> reader = new </span><span style="color:#ffb964;">BufferedReader</span><span>(new </span><span style="color:#ffb964;">InputStreamReader</span><span>(</span><span style="color:#ffb964;">System</span><span>.in));
+</span><span style="color:#ffb964;">String</span><span> input = reader.</span><span style="color:#ffb964;">readLine</span><span>();
+</span></code></pre>
+<p>If the input contains an array of integers, then we can use a combination of the <code>java.io.BufferedReader</code> and the <code>java.util.Arrays</code> classes to parse the input.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#8fbfdc;">int</span><span> n = </span><span style="color:#ffb964;">Integer</span><span>.</span><span style="color:#ffb964;">parseInt</span><span>(reader.</span><span style="color:#ffb964;">readLine</span><span>());
+</span><span style="color:#8fbfdc;">int[]</span><span> arr = </span><span style="color:#ffb964;">Arrays
+</span><span>        .</span><span style="color:#ffb964;">stream</span><span>(reader.</span><span style="color:#ffb964;">readLine</span><span>().</span><span style="color:#ffb964;">split</span><span>(</span><span style="color:#556633;">&quot; &quot;</span><span>))
+</span><span>        .</span><span style="color:#ffb964;">mapToInt</span><span>(</span><span style="color:#ffb964;">Integer</span><span>::</span><span style="color:#ffb964;">parseInt</span><span>)
+</span><span>        .</span><span style="color:#ffb964;">toArray</span><span>();
+</span></code></pre>
+<h1 id="generics"><a class="zola-anchor" href="#generics" aria-label="Anchor link for: generics">Generics</a></h1>
+<p>Java, like many languages of its kind, permits the use of <em>generics</em> to subtype a class when the underlying subtype can be treated as opaque (i.e., the structure of the subtype is irrelevant). This is extremely useful for defining various kinds of abstract data types (ADTs), such as Collections. Lists, Queues, Sets, Trees, Maps, etc. rarely care about the underlying representation of the data they contain. They simply care about the structure that they employ to organize the data. As computer scientists and engineers, that's what we care about too.</p>
+<p>The following is an example of a generic subtype in Java and its use within methods and when defining variables.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#8fbfdc;">public class </span><span style="color:#ffb964;">MyList</span><span>&lt;</span><span style="color:#ffb964;">E</span><span>&gt; {
+</span><span>
+</span><span>    </span><span style="color:#8fbfdc;">public void </span><span style="color:#fad07a;">add</span><span>(</span><span style="color:#ffb964;">E elt</span><span>) { ... }
+</span><span>
+</span><span>    </span><span style="color:#8fbfdc;">public </span><span style="color:#ffb964;">E </span><span style="color:#fad07a;">first</span><span>() { ... }
+</span><span>}
+</span><span>
+</span><span style="color:#ffb964;">MyList</span><span>&lt;</span><span style="color:#ffb964;">Integer</span><span>&gt; list = new </span><span style="color:#ffb964;">MyList</span><span>&lt;&gt;();
+</span></code></pre>
+<p>The primary intention of generics is to reduce the number of subtypes that need to be implemented for some class when the underlying subtype is opaque. Instead of defining a List for handling Integers and a List for handling Strings, we can define a single List that handles a generic subtype.</p>
+<p>The downside of generics--specifically within Java--is that they're implemented extremely poorly. Generic support was not a part of the original language specification and had to be added into the language later, which has been true of most older statically typed languages. In short, the Java engineers at the time could not find an adequate design to include generics into the language and opted for a more shallow design called <em>type erasure</em>. After a Java class is compiled, its generic subtype is erased and replaced with the more general <em>Object</em> type. This has two very serious consequences.</p>
+<p>First, <strong>Java's static type enforcement is undermined and can no longer guarantee program correctness in all cases.</strong> Classes could already be subtyped with the Object type. This would permit a Collection to have a mixture of different kinds of objects and would place the responsibility on the developer to ensure that only permissible types were used, if such constraints needed to be enforced. The inclusion of a generic type offers the possibility that a Collection could be defined over any type but only include members of the same type. Since Java employs type erasure, this constraint can only be enforced at compile time. Types are typically checked at compile time, so this should be fine. Except the pre-existing language semantics permit subtypes to be ignored when the Object subtype is being used. This leads to a blind spot in Java's type enforcement when subtypes are omitted although it does result in a warning.</p>
+<p>Normally, if you attempt to assign a <code>Collection&lt;A&gt;</code> to a variable whose type is <code>Collection&lt;B&gt;</code>, then the operation should only be permissible if A is a subtype of B. This is permissible because a variable whose type is <code>Collection&lt;B&gt;</code> could reasonably hold members of type A, since they are also a subtype of B. However, a generic always indicates a type, such as String or Integer, that is a subtype of Object. Therefore, we shouldn't be able to assign a <code>Collection&lt;Object&gt;</code> to a variable whose type is <code>Collection&lt;String&gt;</code>, since a Collection of Strings wouldn't reasonably hold members that are other types of Objects, such as Integers. Due to type erasure, this is permissible in Java since a <code>Collection&lt;String&gt;</code>is actually a <code>Collection&lt;Object&gt;</code> and assigning a <code>Collection&lt;Object&gt;</code> to a variable whose type is <code>Collection&lt;Object&gt;</code> appears perfectly reasonable. This leads to some extremely strange results that permit a Collection to be both a <code>Collection&lt;String&gt;</code> and <code>Collection&lt;Integer&gt;</code> simultaneously.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#ffb964;">List</span><span> strings = new </span><span style="color:#ffb964;">ArrayList</span><span>();
+</span><span>strings.</span><span style="color:#ffb964;">add</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">hello</span><span style="color:#556633;">&quot;</span><span>);
+</span><span style="color:#ffb964;">List</span><span>&lt;</span><span style="color:#ffb964;">Integer</span><span>&gt; ints = new </span><span style="color:#ffb964;">ArrayList</span><span>&lt;&gt;();
+</span><span>ints.</span><span style="color:#ffb964;">add</span><span>(</span><span style="color:#cf6a4c;">1</span><span>);
+</span><span style="color:#888888;">// ints.add(&quot;abc&quot;); // not permitted
+</span><span>strings.</span><span style="color:#ffb964;">add</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">world</span><span style="color:#556633;">&quot;</span><span>);
+</span><span style="color:#ffb964;">System</span><span>.out.</span><span style="color:#ffb964;">println</span><span>(ints); </span><span style="color:#888888;">// [&quot;hello&quot;, 1, &quot;world&quot;]
+</span></code></pre>
+<p>Second, <strong>Java's performance dramatically declines when using classes that include the generic subtype.</strong> This specifically occurs when using the Object representation of primitives (e.g., Integer, Long, Float, Double, etc.). Since generics are erased into Objects and primitives are not Objects, generics cannot currently support primitives. As such, all primitive values must be <em>autoboxed</em> into an Object when added to a generic Collection and <em>unboxed</em> back into a primitive when removed. This leads to a significant GC load due to the massive population of unnecessary Objects stored in the Collection and the large amount of garbage created through constant boxing and unboxing. In most cases, this performance degradation can be ignored. However, in performance critical software, it cannot.</p>
+<p>Furthermore, in competitive programming, transforming an <code>int[]</code> into an <code>ArrayList&lt;Integer&gt;</code> can be the singular reason why test cases result in a time limit exceeded (TLE). The mem allocations associated with each <code>int</code> being autoboxed into an <code>Integer</code> plus the GC load to manage those Objects results in a significantly larger running time. Competitive programmers are therefore strongly advised to ignore all Collections provided by the Java standard library as well as any other classes that employ generics until primitives receive generic support. Arrays and non-generic implementations of a Node class should be employed instead.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#ffb964;">List</span><span>&lt;</span><span style="color:#ffb964;">Integer</span><span>&gt; list = new </span><span style="color:#ffb964;">ArrayList</span><span>&lt;&gt;(n); </span><span style="color:#888888;">// bad
+</span><span style="color:#8fbfdc;">int[]</span><span> arr = new </span><span style="color:#8fbfdc;">int</span><span>[n]; </span><span style="color:#888888;">// good
+</span></code></pre>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h">Read more</span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://latenitecoding.github.io/zig/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Zig</span>
+                        </a>
+                    </span>
+                
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2024
+ Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

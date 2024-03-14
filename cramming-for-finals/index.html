@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://latenitecoding.github.io/style.css">
+    <link rel="stylesheet" href="https://latenitecoding.github.io/color/blue.css">
+
+        <link rel="stylesheet" href="https://latenitecoding.github.io/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://latenitecoding.github.io/font-hack.css">
+
+    <meta name="description" content="">
+
+    <meta property="og:description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://latenitecoding.github.io/cramming-for-finals/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="">
+    <meta property="twitter:domain" content="latenitecoding.github.io">
+    <meta property="twitter:url" content="https://latenitecoding.github.io/cramming-for-finals/">
+
+        
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+            
+                <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+            
+        
+        
+            <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+            </script>
+        
+    
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+        
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://latenitecoding.github.io" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            Algo Owls
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://latenitecoding.github.io">home</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/algorithms">algorithms</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/data-structures">structures</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/theory">theory</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/tricks">tricks</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/languages">languages</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/exercises">exercises</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/contests">contests</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/tags">tags</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/archive">archive</a></li>
+            
+                <li><a href="https://latenitecoding.github.io/about">about</a></li>
+            
+                <li><a href="https://github.com/latenitecoding/algo_owls" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://github.com/latenitecoding/algo_owls_solutions" target="_blank" rel="noopener noreferrer">solutions</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://latenitecoding.github.io/cramming-for-finals/">Cramming for Finals</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-03-07
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://latenitecoding.github.io/tags/icpc/">#icpc</a>&nbsp;
+                <a class="post-tag" href="https://latenitecoding.github.io/tags/regionals-2023/">#regionals-2023</a></span>
+    
+
+        <div class="post-content">
+            <p>This problem was introduced as part of the 2023 ICPC Regionals Contest held on Feb. 24th, 2024 for the SCUSA region. It is now archived on Kattis.</p>
+<p><a href="https://open.kattis.com/problems/crammingforfinals">Problem Link</a></p>
+<p><a href="http://serjudging.vanb.org/?cat=47">Test Cases and Solution</a></p>
+<details>
+    <summary>&nbsp;Reveal Solution </summary>
+    <br>
+    <p>The grid size for this problem is unmanageably large. However, the number of students in much smaller in comparison. Each student is identified by the grid position they've chosen as their table and a radius around that table from which they can be heard. Even though this means that each student's coordinates define a 2D circle, that circle overlays a grid and can therefore be represented as a collection of intervals. These intervals represent the rows of tables that can hear that student. Given that there are \(n\) students each with a radius of \(d\), there are approximately \(2dn\) intervals, or about \(5 \cdot 10^6\), which is solvable.</p>
+<ol>
+<li>
+<p>Let there be a function \(f(r, c) \rightarrow I \) which computes a unique table number for a student sitting at row \(r\) and column \(c\). Iterate over the provided coordinates for the students and collect their unique table numbers into an array. Let this be the <em>student tables</em>.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#8fbfdc;">long[]</span><span> studentTables = new </span><span style="color:#8fbfdc;">long</span><span>[n];
+</span><span style="color:#8fbfdc;">for </span><span>(</span><span style="color:#8fbfdc;">int</span><span> i = </span><span style="color:#cf6a4c;">0</span><span>; i &lt; n; i++) {
+</span><span>    </span><span style="color:#8fbfdc;">int[]</span><span> rc = </span><span style="color:#ffb964;">nextTuple</span><span>();
+</span><span>    studentTables[i] = </span><span style="color:#ffb964;">getTableNumber</span><span>(rc[</span><span style="color:#cf6a4c;">0</span><span>], rc[</span><span style="color:#cf6a4c;">1</span><span>], rowLength);
+</span><span>}
+</span></code></pre>
+<ul>
+<li>
+<p>To compute a student's table number, treat the 2D grid as a single 1D array. When a 2D grid is laid out as a 1D array, the rows of the 2D grid exist as consecutive intervals in the 1D array, each with a length equal to the number of columns in the 2D grid. Thus, computing the table number is about using the row number to jump to a specific interval in the 1D array and using the column number as an offset within that interval.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#8fbfdc;">public static long </span><span style="color:#ffb964;">getTableNumber</span><span>(</span><span style="color:#8fbfdc;">int</span><span> r, </span><span style="color:#8fbfdc;">int</span><span> c, </span><span style="color:#8fbfdc;">int</span><span> len) {
+</span><span>  </span><span style="color:#8fbfdc;">return </span><span>(r - </span><span style="color:#cf6a4c;">1</span><span>) * l + (c - </span><span style="color:#cf6a4c;">1</span><span>);
+</span><span>}
+</span></code></pre>
+<p>Don't forget to use the 64-bit <code>long</code> type for table numbers. The largest table number is \(10^{18}\) which cannot be stored in a 32-bit <code>int</code> type.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sort the student tables from least to greatest. Let the first table be the <em>least table</em> and start with the first row as the <em>current row</em>. If the least table cannot be heard from the current row, then Ashley can sit on the first row without hearing other students. The solution is \(0\).</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#ffb964;">Arrays</span><span>.</span><span style="color:#ffb964;">sort</span><span>(studentTables);
+</span></code></pre>
+<ul>
+<li>
+<p>Given a table number that corresponds to row \(r\), that table can be heard from any row \(y\) if \(r-d \leq y \leq r+d\).</p>
+</li>
+<li>
+<p>Since table numbers are laid out in a 1D array, we can use integer division to determine which row from the 2D grid a table belongs to.</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#8fbfdc;">public static int </span><span style="color:#ffb964;">getRow</span><span>(</span><span style="color:#8fbfdc;">long</span><span> t, </span><span style="color:#8fbfdc;">int</span><span> len) {
+</span><span>  </span><span style="color:#8fbfdc;">return </span><span>(t - </span><span style="color:#cf6a4c;">1</span><span>) / len;
+</span><span>}
+</span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Let there by an array called <em>cache</em> that represents the number of students that can be heard from each table on the current row. Iterate over the student tables starting from the least table until you reach a table that cannot be heard from the current row.</p>
+</li>
+<li>
+<p>Let there be a function \(len(t, r) \rightarrow I\) that computes the number of tables on row \(r\) that can hear a student seated at table \(t\). For each student's table, compute the number of tables on the current row that can hear them. Let this length be \(l\). Let the column of the student's table be \(c\). The tables on the current row that can hear the student are defined by the interval \([c-\frac{l}{2},c+\frac{l}{2}]\). Update each of these indices by \(+1\) in the cache. Also compute the number of tables on the previous row that can hear them. Let this length by \(k\). The tables on the previous row that can hear the student are defined by the interval \([c-\frac{k}{2},c+\frac{k}{2}]\). Update each of these indices by \(-1\) in the cache.</p>
+<ul>
+<li>
+<p>You do not need to compute the number of tables on the previous row if the current row is \(0\).</p>
+</li>
+<li>
+<p>Since table numbers are laid out in a 1D array, we can use modulus to determine which column from the 2D grid a table belongs to.</p>
+</li>
+</ul>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#8fbfdc;">public static int </span><span style="color:#ffb964;">getCol</span><span>(</span><span style="color:#8fbfdc;">long</span><span> t, </span><span style="color:#8fbfdc;">int</span><span> len) {
+</span><span>  </span><span style="color:#8fbfdc;">return </span><span>(t - </span><span style="color:#cf6a4c;">1</span><span>) % len;
+</span><span>}
+</span></code></pre>
+<ul>
+<li>
+<p>To compute the length of an interval, you'll need to use a bit of trigonometry. Given a table \(t\) that comes from row \(y\), you can define a right triangle whose height is \(r - y\) and whose hypotenuse is \(d\). The angle between is \(\alpha = \arcsin(\frac{h}{d})\). Therefore the base of the triangle is \(b = \cos(\alpha) \cdot d\). We only care about the discrete tables, so the interval length is \(2 \cdot \lfloor b \rfloor + 1\).</p>
+<pre data-lang="java" style="background-color:#151515;color:#e8e8d3;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#8fbfdc;">public static int </span><span style="color:#ffb964;">getIntervalLength</span><span>(</span><span style="color:#8fbfdc;">int</span><span> r, </span><span style="color:#8fbfdc;">long</span><span> t, </span><span style="color:#8fbfdc;">int</span><span> len, </span><span style="color:#8fbfdc;">int</span><span> d) {
+</span><span>  </span><span style="color:#8fbfdc;">double</span><span> h = r - </span><span style="color:#ffb964;">getRow</span><span>(t, len);
+</span><span>  </span><span style="color:#8fbfdc;">double</span><span> angle = </span><span style="color:#ffb964;">Math</span><span>.</span><span style="color:#ffb964;">asin</span><span>(h / d);
+</span><span>  </span><span style="color:#8fbfdc;">double</span><span> b = </span><span style="color:#ffb964;">Math</span><span>.</span><span style="color:#ffb964;">cos</span><span>(angle) * d;
+</span><span>  </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">2 </span><span>* ((</span><span style="color:#8fbfdc;">int</span><span>) </span><span style="color:#ffb964;">Math</span><span>.</span><span style="color:#ffb964;">floor</span><span>(b + </span><span style="color:#cf6a4c;">0.0000001</span><span>)) + </span><span style="color:#cf6a4c;">1</span><span>;
+</span><span>}
+</span></code></pre>
+<p>Note the inclusion of \(0.0000001\). This is used to ensure that numbers within an epsilon of 7 significant figures are considered to be the same number. Otherwise, the number \(4.9999999\) will be treated as \(4\) rather than \(5\).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Let the number of students that can be heard from an unoccupied table be its <em>noise level</em>. Compute the minimum noise level for the current row by finding the table on the current row in the cache with the smallest value. Maintain the smallest noise level that you see across rows. If the noise level is ever \(0\), then the solution is \(0\).</p>
+<ul>
+<li>In this problem, Ashley cannot sit at a table where a student is currently sitting. Since the noise level is guaranteed to be a non-negative number, you can use the sign of the noise level to indicate whether or not there is a student currently sitting at a given table. For example, if a table has a noise level of \(+2\), then that table is vacant and can hear two other students. However, if a table has a noise level of \(-2\), then that table is occupied and can hear two students (including the one seated at the table).</li>
+</ul>
+</li>
+<li>
+<p>Iterate through the tables starting from the least table. For each table with column \(c\) s.t. the current row \(y = c + d\), remove this table's interval from the cache. The first table whose column \(c\) s.t. \(y &lt; c + d\) becomes the least table. Then repeat this algorithm from step (4) until there are no more tables left to process. Once all tables have been processed, the minimum noise level is the solution.</p>
+</li>
+</ol>
+<p>Optimizations</p>
+<ul>
+<li>
+<p>After processing the current row, if you discover that there is a table whose noise level is \(0\), then that is the solution.</p>
+</li>
+<li>
+<p>Scanning the noise level of each element in the cache is too slow. However, you can keep track of the noise level of each table on a given row as you process the student tables without having to maintain a cache. Given a current row, each student that can be heard from that row is represented by an interval. These intervals each have a <em>left value</em> (which opens the interval) and a <em>right value</em> (which closes the interval). Store these intervals and sort them by least left, then least right. Iterate over the intervals. The noise level across tables increases by 1 for each left value and decreases by 1 for each right value. Each interval of length \(2d\) is an interval with a student sitting at the middle. Student tables cannot be occupied. Keep track of the smallest noise level across interval only considering tables that can be occupied. If there are any gaps between intervals, then the noise level on this row is \(0\) and the solution to the problem is also \(0\).</p>
+</li>
+</ul>
+</details>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h">Read more</span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://latenitecoding.github.io/eccentric-excursion/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Eccentric Excursion</span>
+                        </a>
+                    </span>
+                
+                
+                    <span class="button next">
+                        <a href="https://latenitecoding.github.io/champernowne-verification/">
+                            <span class="button__text">Champernowne Verification</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2024
+ Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
